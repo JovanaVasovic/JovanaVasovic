@@ -6,7 +6,7 @@ import pageObjects.LogInPage;
 import utility.Constant;
 import utility.ExcelUtils;
 
-public class SignIn_Action {
+public class LogIn_Action {
 	
 	public static void SetUpExcel() throws Exception {
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Sheet1");

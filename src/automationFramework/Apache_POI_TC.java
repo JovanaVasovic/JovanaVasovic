@@ -48,10 +48,14 @@ public class Apache_POI_TC {
 		ExcelUtils.setCellData("Pass", 1, 12);
 		
 		LogOutPage.setLogOutIcon(driver);
-        LogOutPage.setLogOutButton(driver);
-        Thread.sleep(2000);
-        LogOutPage.setLogOut(driver);
-        System.out.println("Logout Successfully.");
+
+        	LogOutPage.setLogOutButton(driver);
+
+        	Thread.sleep(2000);
+
+        	LogOutPage.setLogOut(driver);
+
+        	System.out.println("Logout Successfully.");
 
 		driver.quit();
 
