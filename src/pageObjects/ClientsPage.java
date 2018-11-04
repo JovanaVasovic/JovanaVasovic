@@ -23,9 +23,9 @@ public class ClientsPage {
 	}
 	
 	public static WebElement getClientName(WebDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-        WebElement ClientName=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@aria-label=\"Client Name\"]")));
-        return ClientName;
+        	WebDriverWait wait = new WebDriverWait(driver, 5);
+        	element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@aria-label=\"Client Name\"]")));
+        	return element;
     }
 	
 	public static void addClientName(WebDriver driver, String ClientName) {
@@ -130,23 +130,22 @@ public class ClientsPage {
 	}*/
 	
 	public static WebElement getStatus(WebDriver driver) {
-	     element = driver.findElement(By.xpath("//label[contains(text(),'Status: Active')]"));
-	     return element;
-	     }
-	   public static WebElement getStatusLabel(WebDriver driver)
-	   {
-	     element = driver.findElement(By.xpath("//label[contains(text(),'Status: Active')]"));
-	     return element;
-	   }
+	     	element = driver.findElement(By.xpath("//label[contains(text(),'Status: Active')]"));
+	     	return element;
+	}
 
-	   public static void addStatus(WebDriver driver, String status) throws InterruptedException {
-	     String currentStatus = getStatus(driver).getText();
-	     String cs = currentStatus.split(":")[1].trim();
-	     if(!status.equals(cs))
-	     {
-	       getStatus(driver).click();
-	     }
-	   }
+	public static WebElement getStatusLabel(WebDriver driver) {
+	     	element = driver.findElement(By.xpath("//label[contains(text(),'Status: Active')]"));
+	     	return element;
+	}
+
+	public static void addStatus(WebDriver driver, String status) throws InterruptedException {
+	     	String currentStatus = getStatus(driver).getText();
+	     	String cs = currentStatus.split(":")[1].trim();
+	     	if(!status.equals(cs)) {
+	       		getStatus(driver).click();
+	     	}
+	}
 	
 	public static WebElement getSave(WebDriver driver) {
 		 element = driver.findElement(By.xpath("//div[contains(text(),'Save')]"));
